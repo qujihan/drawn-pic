@@ -1,0 +1,6 @@
+[submodule "typst-draw-layout"]
+	path = typst-draw-layout
+	url = https://github.com/qujihan/typst-draw-layout.git
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/qujihan/fonts.git
