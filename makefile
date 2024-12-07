@@ -1,13 +1,11 @@
-.PHONY: w c
+file_name := "drawn-pic.pdf"
 
+.PHONY: w c b
 w:
-	typst w main.typ --root . --font-path ./fonts
+	typst w main.typ ${file_name} --root . --font-path ./fonts
 	
 c:
-	typst c main.typ --root . --font-path ./fonts
+	typst c main.typ ${file_name} --root . --font-path ./fonts
 
-ws:
-	typst w main.typ --root . --font-path ./fonts --format=svg{i}
-	
-cs:
-	typst c main.typ --root . --font-path ./fonts --format=svg{i}
+b: 
+	python3 ./batch.py
